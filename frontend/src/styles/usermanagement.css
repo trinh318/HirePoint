@@ -1,0 +1,181 @@
+/* Định dạng container bao quanh bảng */
+.user-management-table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+/* Định dạng bảng */
+.user-management-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+/* Định dạng các ô tiêu đề (header) */
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Định dạng các tiêu đề */
+th {
+  position: relative;
+  background-color: #f8f8f8;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Hiệu ứng khi di chuột qua các hàng */
+.user-management-row {
+  height: 60px;
+  transition: background-color 0.2s;
+}
+
+/* Tạo hiệu ứng hover cho hàng */
+.user-management-row:hover {
+  background-color: #f5f5f5;
+}
+
+/* Định dạng checkbox chọn tất cả */
+.user-management-select-all {
+  width: 20px;
+  height: 20px;
+}
+
+/* Định dạng checkbox trong các hàng */
+.user-management-row-checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hiển thị khi hover qua tiêu đề */
+th:hover {
+  background-color: #f0f0f0;
+}
+
+/* Thêm khoảng cách cho các biểu tượng sắp xếp */
+th>span {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+/* Dropdown menu cho các hành động như Edit/Delete */
+.user-management-dropdown {
+  position: relative;
+}
+
+/* Định dạng chung cho container chứa biểu tượng */
+.user-management-dropdown {
+  display: flex;
+  /* Hiển thị biểu tượng theo hàng ngang */
+  gap: 10px;
+  /* Khoảng cách giữa các biểu tượng */
+  align-items: center;
+  /* Căn giữa theo chiều dọc */
+}
+
+/* Định dạng chung cho các biểu tượng */
+.user-management-dropdown svg {
+  font-size: 20px;
+  /* Kích thước biểu tượng */
+  color: #555;
+  /* Màu biểu tượng mặc định */
+  transition: color 0.3s, transform 0.3s;
+  /* Hiệu ứng chuyển đổi màu và scale khi hover */
+  cursor: pointer;
+  /* Con trỏ chuột thay đổi thành pointer khi hover */
+}
+
+/* Hiệu ứng khi hover lên biểu tượng */
+.user-management-dropdown svg:hover {
+  transform: scale(1.2);
+  /* Phóng to nhẹ khi hover */
+}
+
+/* Tùy chỉnh riêng cho từng biểu tượng nếu cần */
+.user-management-dropdown svg:nth-child(1) {
+  color: #888;
+  /* Màu xanh lá cho biểu tượng đầu tiên */
+}
+
+.user-management-dropdown svg:nth-child(2) {
+  color: #888;
+  /* Màu vàng cho biểu tượng thứ hai */
+}
+
+.user-management-dropdown svg:nth-child(3) {
+  color: #888;
+  /* Màu đỏ cho biểu tượng thứ ba */
+}
+
+/* Định dạng khi chọn nhiều hàng */
+.selected {
+  background-color: #e0f7fa;
+}
+
+/* Định dạng chung cho biểu tượng sắp xếp */
+.sort-icon {
+  margin-left: 5px;
+  color: #777;
+  font-size: 12px;
+  vertical-align: middle;
+  transition: color 0.2s ease;
+}
+
+/* Hiệu ứng khi hover tiêu đề */
+th:hover .sort-icon {
+  color: #333;
+}
+
+/* Áp dụng màu nền xen kẽ cho các hàng lẻ */
+.user-management-row:nth-child(odd) {
+  background-color: #ffffff;
+  /* Màu sáng */
+}
+
+/* Áp dụng màu nền xen kẽ cho các hàng chẵn */
+.user-management-row:nth-child(even) {
+  background-color: #f9f9f9;
+  /* Màu trắng */
+}
+
+/* Hiệu ứng hover cho tất cả các hàng */
+.user-management-row:hover {
+  background-color: #f0f0f0;
+  /* Màu nhấn khi hover */
+  cursor: pointer;
+  /* Thêm con trỏ khi di chuột qua */
+}
+
+.user-info-edit-radio-group {
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  gap: 20px;
+}
+
+.user-info-edit-radio-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-info-edit-radio-row input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #007bff;
+}
+
+.user-info-edit-radio-row label {
+  cursor: pointer;
+  font-weight: 500;
+}

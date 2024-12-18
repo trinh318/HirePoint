@@ -1,0 +1,226 @@
+/* Container */
+.modern-inbox-container {
+  padding: 20px;
+  background-color: #f4f6f9;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.modern-inbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modern-inbox-header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Filters */
+.modern-inbox-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.modern-inbox-filter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e9ecef;
+  color: #555;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modern-inbox-filter.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Inbox List */
+.modern-inbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modern-inbox-item {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.modern-inbox-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modern-inbox-item.read {
+  background-color: #e9ecef;
+}
+
+.modern-inbox-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modern-inbox-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modern-inbox-timestamp {
+  font-size: 12px;
+  color: #777;
+}
+
+.modern-inbox-content {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Actions */
+.modern-inbox-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modern-inbox-action-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modern-inbox-action-button.toggle-read {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.modern-inbox-action-button.delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Empty State */
+.modern-inbox-empty {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Styling */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .modern-inbox-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+.dark-mode .modern-inbox-item.read {
+  background-color: #2c2c2c;
+}
+
+.dark-mode .modern-inbox-filters button {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .modern-inbox-search input {
+  background-color: #2c2c2c;
+  color: white;
+  border: 1px solid #444;
+}
+
+/* Modern Inbox Search Bar */
+.modern-inbox-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  border-radius: 6px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modern-inbox-search input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 6px;
+  color: #333;
+}
+
+.modern-inbox-search input::placeholder {
+  color: #aaa;
+}
+
+.modern-inbox-search svg {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Hover and Focus Effects */
+.modern-inbox-search:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modern-inbox-search input:focus {
+  border-bottom: 2px solid #007bff;
+}
+
+/* Dark Mode Support */
+.dark-mode .modern-inbox-search {
+  background-color: #2c2c2c;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .modern-inbox-search input {
+  color: white;
+}
+
+.dark-mode .modern-inbox-search input::placeholder {
+  color: #aaa;
+}
+
+.dark-mode .modern-inbox-search svg {
+  color: #ccc;
+}

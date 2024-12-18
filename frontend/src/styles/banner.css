@@ -1,0 +1,138 @@
+.banner-body-main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+}
+  
+.banner-body {
+    position: relative; /* Set to relative to contain pseudo-elements */
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #094248, #B7E1E4);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Hide any overflow from skewed pseudo-elements */
+}
+
+/* First layer */
+.banner-body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 150, 136, 0.3); /* Semi-transparent green layer */
+    transform: skewX(-20deg); /* Adjust angle as needed */
+    z-index: 0; /* Set to 0 to keep it behind other elements */
+}
+
+/* Second layer with slight offset */
+.banner-body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(14, 126, 115, 0.2); /* Lighter green layer */
+    transform: skewX(-15deg) translateX(60px); /* Offset to create layered look */
+    z-index: 0;
+}
+
+/* Additional layered background */
+.banner-body .extra-layer-1,
+.banner-body .extra-layer-2,
+.banner-body .extra-layer-3 {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+/* Third layer */
+.banner-body .extra-layer-1 {
+    background: rgba(22, 146, 140, 0.2); /* Light blue */
+    transform: skewX(-20deg) translateX(120px); /* Greater offset for deeper effect */
+}
+
+/* Fourth layer */
+.banner-body .extra-layer-2 {
+    background: rgba(50, 100, 150, 0.15); /* Darker blue */
+    transform: skewX(-20deg) translateX(180px); /* Greater offset for deeper effect */
+}
+
+/* Fifth layer */
+.banner-body .extra-layer-3 {
+    background: rgba(75, 195, 183, 0.262); /* Pinkish layer */
+    transform: skewX(-20deg) translateX(240px); /* Greater offset for deeper effect */
+}
+  
+.banner-container {
+    position: relative; /* Make sure this is above pseudo-elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 20px;
+    z-index: 1; /* Higher z-index to appear above pseudo-elements */
+}
+  
+.banner-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+}
+  
+.logo-banner {
+    width: 80px;
+    margin-bottom: 10px;
+}
+  
+h3 {
+    color: #333;
+    font-size: 1.2rem;
+}
+  
+h1 {
+    color: #0A2657;
+    font-size: 2.5rem;
+}
+  
+p {
+    color: #555;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+  
+.join-button {
+    background-color: #0A2657;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.image-section {
+    flex: 1;
+}
+  
+.image-section img {
+    height: 250px;
+    border-radius: 10px;
+}
+
